@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>空气慧行 | 项目网站</title>
+  <style>
+    :root { --ink:#182230; --muted:#586575; --line:#d8dee5; --paper:#ffffff; --wash:#f3f6f7; --teal:#087f79; --orange:#d66b28; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--wash); font-family:"Noto Sans SC","Microsoft YaHei","SimSun",sans-serif; line-height:1.65; }
+    header { background:#123b3a; color:#fff; padding:42px 7vw 36px; }
+    header .topline { display:flex; justify-content:space-between; gap:24px; align-items:center; max-width:1100px; margin:auto; }
+    .brand { font-size:30px; font-weight:700; letter-spacing:0; }
+    .tag { color:#cae7e3; font-size:14px; }
+    nav { margin:28px auto 0; max-width:1100px; display:flex; gap:10px; flex-wrap:wrap; }
+    nav a { color:#fff; border:1px solid #70b3ad; padding:7px 12px; text-decoration:none; border-radius:4px; font-size:14px; }
+    main { max-width:1100px; margin:0 auto; padding:30px 7vw 60px; }
+    section { background:var(--paper); border:1px solid var(--line); padding:26px 30px; margin-bottom:20px; }
+    h1,h2,h3 { margin:0 0 12px; line-height:1.25; letter-spacing:0; }
+    h1 { font-size:27px; } h2 { font-size:22px; color:#123b3a; } h3 { font-size:17px; color:var(--teal); margin-top:20px; }
+    p { margin:0 0 12px; } ul { margin:8px 0 12px 22px; padding:0; } li { margin:4px 0; }
+    .eyebrow { color:var(--orange); font-weight:700; font-size:13px; margin-bottom:7px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .metric { border-left:4px solid var(--teal); background:#f4faf9; padding:14px 16px; }
+    .metric strong { display:block; font-size:24px; color:#123b3a; }
+    .callout { border-left:4px solid var(--orange); background:#fff7ef; padding:14px 16px; margin:14px 0; }
+    table { width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:14px; }
+    th,td { border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top; }
+    th { background:#edf3f3; color:#123b3a; }
+    footer { max-width:1100px; margin:0 auto; color:var(--muted); padding:0 7vw 40px; font-size:13px; }
+    @media (max-width:720px) { header { padding:30px 20px; } main { padding:20px 14px 40px; } section { padding:20px; } .topline { flex-direction:column; align-items:flex-start !important; } .grid { grid-template-columns:1fr; } table { font-size:13px; } th,td { padding:7px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topline"><div class="brand">空气慧行</div><div class="tag">城市高温与空气污染下的健康出行研究</div></div>
+    <nav aria-label="页面导航">
+      <a href="#team">团队介绍</a><a href="#proposal">项目提案</a><a href="#plan">数据收集计划</a><a href="#access">可访问性与隐私</a>
+    </nav>
+  </header>
+  <main>
+    <section id="team">
+      <div class="eyebrow">TEAM INTRO</div>
+      <h1>让每一次必要出行都更有把握</h1>
+      <p><strong>团队名称：</strong>空气慧行项目组</p>
+      <p>我们关注城市通勤者、户外工作者、老年人、低收入出行者，以及患有慢性呼吸系统或心血管疾病的人群。本次访谈先聚焦四名具有不同出行情境的学生，再结合更广泛的问卷样本，了解高温、空气污染、交通拥挤和户外等候中的真实经历。</p>
+      <div class="grid">
+        <div class="metric"><strong>4</strong>名学生访谈</div>
+        <div class="metric"><strong>12</strong>份匿名问卷记录</div>
+        <div class="metric"><strong>21</strong>个问卷指标</div>
+      </div>
+    </section>
+
+    <section id="proposal">
+      <div class="eyebrow">PROJECT PROPOSAL</div>
+      <h2>问题背景</h2>
+      <p>城市中的必要出行往往无法因为高温或空气污染而完全取消。通勤者需要在准时到达、出行费用、路线可靠性和身体健康之间做出取舍。现有天气或空气质量信息通常以区域级指标呈现，不能直接说明某条路线的户外暴露、等候风险和可执行的替代方案。</p>
+      <h2>核心问题</h2>
+      <p>用户在出发前和出行过程中难以快速判断环境风险是否足以改变时间、路线或交通方式；即使意识到风险，工作、课程、照护、费用、行动能力和公共交通条件也可能阻止他们采用更安全的选择。</p>
+      <h2>研究目标</h2>
+      <ul><li>了解不同用户的出行情境、暴露地点和身体影响。</li><li>了解用户判断风险、改变计划和信任信息的依据。</li><li>识别无障碍、隐私和现实条件对健康出行服务的约束。</li></ul>
+      <div class="callout"><strong>当前阶段边界：</strong>本阶段只收集和分析问题证据，不把访谈结果直接等同于最终功能需求；后续设计需要继续验证。</div>
+    </section>
+
+    <section id="plan">
+      <div class="eyebrow">DATA COLLECTION PLAN</div>
+      <h2>访谈计划与执行</h2>
+      <p>访谈采用半结构式脚本，围绕三个主题展开，每个主题五个问题，并根据回答进行追问。四名受访者均为学生，但分别具有普通通勤、兼职户外配送、跨校区或实习通勤，以及特殊健康或无障碍需求等情境。每次约二十五至三十分钟，记录时去除姓名等直接身份信息。</p>
+      <table>
+        <thead><tr><th>主题</th><th>关注内容</th><th>访谈对象覆盖</th></tr></thead>
+        <tbody>
+          <tr><td>日常出行情境与环境暴露</td><td>路线、时间、交通方式、户外等待、高温与尾气暴露</td><td>所有对象</td></tr>
+          <tr><td>健康影响与风险判断</td><td>身体反应、警告判断、工作学习和照护影响</td><td>所有对象，注意健康隐私</td></tr>
+          <tr><td>应对方式、障碍与信任</td><td>当前措施、信息来源、时间费用、隐私和信任条件</td><td>所有对象，重点关注弱势情境</td></tr>
+        </tbody>
+      </table>
+      <h2>问卷计划与执行</h2>
+      <p>问卷为匿名自填形式，预计五至七分钟，包含人口统计、交通与暴露、提醒偏好、健康影响、可访问性、隐私和开放回答。健康问题设置“不愿回答”，所有题目均可跳过。</p>
+      <table>
+        <thead><tr><th>数据类型</th><th>题目范围</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td>情境与暴露</td><td>第 1 至 10 题</td><td>描述样本的通勤频率、时长、户外暴露与改变计划情况</td></tr>
+          <tr><td>提醒与决策</td><td>第 11 至 18 题</td><td>了解风险信息、提醒时机、可信来源和现实障碍</td></tr>
+          <tr><td>包容性与隐私</td><td>第 19 至 21 题</td><td>识别无障碍、隐私控制和信息表达需求</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="access">
+      <div class="eyebrow">ACCESSIBILITY &amp; PRIVACY</div>
+      <h2>研究中的保护措施</h2>
+      <ul><li>访谈记录使用 U01 至 U04 编号，不记录真实姓名、电话和精确住址。</li><li>健康问题允许跳过，不要求受访者披露具体诊断。</li><li>服务设想需支持大字体、高对比度、屏幕阅读器、语音、振动、简明语言和多语言。</li><li>位置服务应优先使用大致区域，并让用户控制授权、历史记录和数据用途。</li></ul>
+      <p>本网站用于展示团队介绍、项目提案和数据收集计划，不嵌入报告 PDF，也不要求用户创建账户。</p>
+    </section>
+  </main>
+  <footer>空气慧行项目组 · 人机交互实验 4 · 研究阶段网站</footer>
+</body>
+</html>
