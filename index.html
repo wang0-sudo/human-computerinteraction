@@ -3,96 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>空气慧行 | 项目网站</title>
-  <style>
-    :root { --ink:#182230; --muted:#586575; --line:#d8dee5; --paper:#ffffff; --wash:#f3f6f7; --teal:#087f79; --orange:#d66b28; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:var(--wash); font-family:"Noto Sans SC","Microsoft YaHei","SimSun",sans-serif; line-height:1.65; }
-    header { background:#123b3a; color:#fff; padding:42px 7vw 36px; }
-    header .topline { display:flex; justify-content:space-between; gap:24px; align-items:center; max-width:1100px; margin:auto; }
-    .brand { font-size:30px; font-weight:700; letter-spacing:0; }
-    .tag { color:#cae7e3; font-size:14px; }
-    nav { margin:28px auto 0; max-width:1100px; display:flex; gap:10px; flex-wrap:wrap; }
-    nav a { color:#fff; border:1px solid #70b3ad; padding:7px 12px; text-decoration:none; border-radius:4px; font-size:14px; }
-    main { max-width:1100px; margin:0 auto; padding:30px 7vw 60px; }
-    section { background:var(--paper); border:1px solid var(--line); padding:26px 30px; margin-bottom:20px; }
-    h1,h2,h3 { margin:0 0 12px; line-height:1.25; letter-spacing:0; }
-    h1 { font-size:27px; } h2 { font-size:22px; color:#123b3a; } h3 { font-size:17px; color:var(--teal); margin-top:20px; }
-    p { margin:0 0 12px; } ul { margin:8px 0 12px 22px; padding:0; } li { margin:4px 0; }
-    .eyebrow { color:var(--orange); font-weight:700; font-size:13px; margin-bottom:7px; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .metric { border-left:4px solid var(--teal); background:#f4faf9; padding:14px 16px; }
-    .metric strong { display:block; font-size:24px; color:#123b3a; }
-    .callout { border-left:4px solid var(--orange); background:#fff7ef; padding:14px 16px; margin:14px 0; }
-    table { width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:14px; }
-    th,td { border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top; }
-    th { background:#edf3f3; color:#123b3a; }
-    footer { max-width:1100px; margin:0 auto; color:var(--muted); padding:0 7vw 40px; font-size:13px; }
-    @media (max-width:720px) { header { padding:30px 20px; } main { padding:20px 14px 40px; } section { padding:20px; } .topline { flex-direction:column; align-items:flex-start !important; } .grid { grid-template-columns:1fr; } table { font-size:13px; } th,td { padding:7px; } }
-  </style>
+  <meta name="description" content="空气慧行人机交互项目网站，完整展示团队介绍、项目方案、学生访谈脚本与匿名问卷数据收集方案。">
+  <meta name="theme-color" content="#185c48">
+  <title>空气慧行 | 团队、项目与数据收集方案</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="topline"><div class="brand">空气慧行</div><div class="tag">城市高温与空气污染下的健康出行研究</div></div>
-    <nav aria-label="页面导航">
-      <a href="#team">团队介绍</a><a href="#proposal">项目提案</a><a href="#plan">数据收集计划</a><a href="#access">可访问性与隐私</a>
-    </nav>
-  </header>
-  <main>
-    <section id="team">
-      <div class="eyebrow">TEAM INTRO</div>
-      <h1>让每一次必要出行都更有把握</h1>
-      <p><strong>团队名称：</strong>空气慧行项目组</p>
-      <p>我们关注城市通勤者、户外工作者、老年人、低收入出行者，以及患有慢性呼吸系统或心血管疾病的人群。本次访谈先聚焦四名具有不同出行情境的学生，再结合更广泛的问卷样本，了解高温、空气污染、交通拥挤和户外等候中的真实经历。</p>
-      <div class="grid">
-        <div class="metric"><strong>4</strong>名学生访谈</div>
-        <div class="metric"><strong>12</strong>份匿名问卷记录</div>
-        <div class="metric"><strong>21</strong>个问卷指标</div>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header" id="top"><div class="wrap header-row"><a class="brand" href="#top">空气慧行</a><span class="course">人机交互实验 4 · 项目网站</span></div></header>
+  <div class="hero"><div class="wrap">
+    <p class="hero-label">健康 · 福祉 · 环境可持续发展</p>
+    <h1>空气慧行</h1>
+    <p class="subtitle">城市高温与空气污染下的健康出行研究</p>
+    <p class="hero-copy">关注必须出门的人，理解通勤中的环境暴露、健康担忧与现实限制，让设计建立在用户的实际经历之上。</p>
+  </div></div>
+  <nav class="site-nav" aria-label="项目导航"><div class="wrap nav-links">
+    <a href="#team">团队介绍</a><a href="#proposal">项目方案</a><a href="#plan">数据收集总览</a><a href="#interview">访谈方案</a><a href="#survey">问卷方案</a><a href="#access">伦理与可访问性</a>
+  </div></nav>
+  <main id="main">
+    <section id="team" aria-labelledby="team-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">01</span><h2 id="team-title">团队介绍</h2></div>
+      <p class="lead">空气慧行项目组围绕健康、福祉与环境可持续发展开展研究，关注高温和空气污染如何影响城市中的必要出行。本阶段以学生出行情境为切入点，同时保留对更广泛群体需求的关注。</p>
+      <div class="team-grid">
+        <article class="team-profile"><h3 class="member-name">王誉达</h3><p class="muted">项目研究与内容整理</p><dl><dt>初稿撰写</dt><dd>项目简介、访谈开场、访谈问题、问卷问题和访谈结束语。</dd><dt>修改与审核</dt><dd>核对主题覆盖、问题类型、无障碍需求、文档格式与题目数量。</dd></dl></article>
+        <div><h3>先理解问题，再做设计</h3><p>我们关注通勤者如何在准时到达、费用、身体感受和环境风险之间做出取舍，尤其留意缺少替代出行方式、需要较长时间在户外或存在特定健康需求的人。</p><p>四位访谈参与者均计划从学生群体招募，通过不同的通勤与户外暴露情境形成比较；当前学生样本不代表老年人、慢性病患者等全部潜在用户。</p></div>
       </div>
-    </section>
+      <dl class="facts"><div><dt>4 位</dt><dd>拟招募学生访谈对象</dd></div><div><dt>15 题</dt><dd>访谈主问题，均附追问</dd></div><div><dt>21 题</dt><dd>匿名问卷设计</dd></div></dl>
+    </div></section>
 
-    <section id="proposal">
-      <div class="eyebrow">PROJECT PROPOSAL</div>
-      <h2>问题背景</h2>
-      <p>城市中的必要出行往往无法因为高温或空气污染而完全取消。通勤者需要在准时到达、出行费用、路线可靠性和身体健康之间做出取舍。现有天气或空气质量信息通常以区域级指标呈现，不能直接说明某条路线的户外暴露、等候风险和可执行的替代方案。</p>
-      <h2>核心问题</h2>
-      <p>用户在出发前和出行过程中难以快速判断环境风险是否足以改变时间、路线或交通方式；即使意识到风险，工作、课程、照护、费用、行动能力和公共交通条件也可能阻止他们采用更安全的选择。</p>
-      <h2>研究目标</h2>
-      <ul><li>了解不同用户的出行情境、暴露地点和身体影响。</li><li>了解用户判断风险、改变计划和信任信息的依据。</li><li>识别无障碍、隐私和现实条件对健康出行服务的约束。</li></ul>
-      <div class="callout"><strong>当前阶段边界：</strong>本阶段只收集和分析问题证据，不把访谈结果直接等同于最终功能需求；后续设计需要继续验证。</div>
-    </section>
+    <section id="proposal" aria-labelledby="proposal-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="proposal-title">项目方案</h2></div>
+      <div class="proposal-grid">
+        <article><h3>背景是什么？</h3><p>上课、实习、通勤与户外工作通常无法因为高温或空气污染而取消。步行、骑行和乘坐公共交通的人，可能在无遮阴道路、拥堵路口或露天站点经历较长时间的环境暴露。费用、固定到达时间与交通资源，会进一步压缩他们的选择空间。</p></article>
+        <article><h3>问题出在哪里？</h3><p>区域级天气或空气质量指标难以直接回答“这次出行会影响我吗”“何时需要改变安排”。用户还需自行整合路线、等待时长与自身情况；即使识别了风险，也未必有时间、金钱或可用的交通方式采取行动。</p></article>
+        <article><h3>为什么值得解决？</h3><p>环境暴露可能造成不适、疲劳和健康担忧，影响学习、工作及日常生活。对缺少替代交通方式、必须长时间在户外或有特定健康需求的人，健康与准时之间的取舍更为困难。理解这些障碍，有助于减少信息差并支持更公平、可持续的出行选择。</p></article>
+        <article><h3>为什么选择智能手机应用？</h3><p>出行决策会发生在出门前，也会发生在途中。智能手机通常随身携带，适合及时接收提醒、按需使用大致位置，并结合系统的大字体、屏幕阅读器、语音或振动反馈。网站适合主动查询；移动应用更适合持续、情境相关的支持。具体权限与提醒方式仍需通过研究验证。</p></article>
+        <article class="wide"><h3>研究目标与可行范围</h3><p>本阶段识别用户在哪些地点与时段暴露于环境风险、如何判断风险、怎样应对，以及什么阻止他们采取更有利于健康的选择。后续可先围绕已有天气与空气质量数据验证信息表达和出行决策原型；路线级暴露精度、个体健康判断与智能手表联动均需进一步验证。</p><p>项目聚焦日常健康出行，不开展活动量或卡路里追踪。当前提出的是待研究的问题与方向，最终功能应由访谈和问卷证据支持。</p></article>
+      </div>
+    </div></section>
 
-    <section id="plan">
-      <div class="eyebrow">DATA COLLECTION PLAN</div>
-      <h2>访谈计划与执行</h2>
-      <p>访谈采用半结构式脚本，围绕三个主题展开，每个主题五个问题，并根据回答进行追问。四名受访者均为学生，但分别具有普通通勤、兼职户外配送、跨校区或实习通勤，以及特殊健康或无障碍需求等情境。每次约二十五至三十分钟，记录时去除姓名等直接身份信息。</p>
-      <table>
-        <thead><tr><th>主题</th><th>关注内容</th><th>访谈对象覆盖</th></tr></thead>
-        <tbody>
-          <tr><td>日常出行情境与环境暴露</td><td>路线、时间、交通方式、户外等待、高温与尾气暴露</td><td>所有对象</td></tr>
-          <tr><td>健康影响与风险判断</td><td>身体反应、警告判断、工作学习和照护影响</td><td>所有对象，注意健康隐私</td></tr>
-          <tr><td>应对方式、障碍与信任</td><td>当前措施、信息来源、时间费用、隐私和信任条件</td><td>所有对象，重点关注弱势情境</td></tr>
-        </tbody>
-      </table>
-      <h2>问卷计划与执行</h2>
-      <p>问卷为匿名自填形式，预计五至七分钟，包含人口统计、交通与暴露、提醒偏好、健康影响、可访问性、隐私和开放回答。健康问题设置“不愿回答”，所有题目均可跳过。</p>
-      <table>
-        <thead><tr><th>数据类型</th><th>题目范围</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td>情境与暴露</td><td>第 1 至 10 题</td><td>描述样本的通勤频率、时长、户外暴露与改变计划情况</td></tr>
-          <tr><td>提醒与决策</td><td>第 11 至 18 题</td><td>了解风险信息、提醒时机、可信来源和现实障碍</td></tr>
-          <tr><td>包容性与隐私</td><td>第 19 至 21 题</td><td>识别无障碍、隐私控制和信息表达需求</td></tr>
-        </tbody>
-      </table>
-    </section>
+    <section id="plan" aria-labelledby="plan-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">03</span><h2 id="plan-title">数据收集总览</h2></div>
+      <p class="lead">访谈用于理解原因与具体经历，问卷用于描述出行情境、偏好与限制的分布。两种方法围绕相同研究问题，使用不同的问题形式相互补充。</p>
+      <div class="notice"><strong>研究状态：</strong>以下为数据收集方案。4 位学生是拟招募对象，问卷未在本网站收集；计划样本和示例数据不作为已完成的真实调研结果。</div>
+      <div class="table-wrap"><table><caption>研究方法与安排</caption><thead><tr><th scope="col">方法</th><th scope="col">对象与时长</th><th scope="col">收集内容</th><th scope="col">分析方式</th></tr></thead><tbody>
+        <tr><th scope="row">半结构式访谈</th><td>4 位学生；每位约 25–30 分钟</td><td>出行情境、身体感受、风险判断、应对、障碍与信任</td><td>匿名整理记录，按主题归纳，比较不同情境</td></tr>
+        <tr><th scope="row">匿名问卷</th><td>有必要出行经历的人；约 5–7 分钟；首轮计划至少 12 份有效答卷</td><td>21 题，含单选、多选、排序、量表与开放题</td><td>描述频数与分布，归纳开放回答，不据小样本推断总体</td></tr>
+      </tbody></table></div>
+      <h3>实施步骤</h3><ol><li>先进行脚本试访和问卷试填，检查措辞、时长与可访问性，再确定正式版本。</li><li>通过同学与校园社群招募，说明研究目的、匿名方式和退出权利，避免强制参与。</li><li>取得同意后分别开展访谈与问卷，记录匿名编号、情境与必要的研究内容。</li><li>清理重复、无关或明显无效的答卷；缺失项保留为缺失，不擅自补填。汇总共同点、差异和仍需验证的问题。</li></ol>
+    </div></section>
 
-    <section id="access">
-      <div class="eyebrow">ACCESSIBILITY &amp; PRIVACY</div>
-      <h2>研究中的保护措施</h2>
-      <ul><li>访谈记录使用 U01 至 U04 编号，不记录真实姓名、电话和精确住址。</li><li>健康问题允许跳过，不要求受访者披露具体诊断。</li><li>服务设想需支持大字体、高对比度、屏幕阅读器、语音、振动、简明语言和多语言。</li><li>位置服务应优先使用大致区域，并让用户控制授权、历史记录和数据用途。</li></ul>
-      <p>本网站用于展示团队介绍、项目提案和数据收集计划，不嵌入报告 PDF，也不要求用户创建账户。</p>
-    </section>
+    <section id="interview" aria-labelledby="interview-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">04</span><h2 id="interview-title">访谈方案</h2></div>
+      <p>采用半结构式访谈，围绕三个主题开展，每个主题五个主问题。访谈者根据回答选择追问，鼓励描述实际经历，不诱导参与者认可预设功能。</p>
+      <dl class="meta-list"><div><dt>参与对象</dt><dd>4 位学生，均采用匿名编号</dd></div><div><dt>单次时长</dt><dd>约 25–30 分钟</dd></div><div><dt>记录方式</dt><dd>经同意后文字记录</dd></div></dl>
+      <div class="table-wrap"><table class="sample-table"><caption>学生参与者招募情境（拟定，非真实人物档案）</caption><thead><tr><th scope="col">编号</th><th scope="col">情境</th><th scope="col">希望了解的经历</th></tr></thead><tbody>
+        <tr><th scope="row">U01</th><td>校内或住校通勤的学生</td><td>步行、骑行与固定课程时间下的户外暴露。</td></tr>
+        <tr><th scope="row">U02</th><td>有户外兼职经历的学生</td><td>较长户外活动与收入、时间要求之间的取舍。</td></tr>
+        <tr><th scope="row">U03</th><td>跨校区或校外实习通勤的学生</td><td>多次换乘、露天等待与准时到达的压力。</td></tr>
+        <tr><th scope="row">U04</th><td>愿意分享特定健康或可访问性需求的学生</td><td>信息表达、路线可达性及一般建议的适用边界；无需披露诊断。</td></tr>
+      </tbody></table></div>
+      <h3>访谈开场与同意</h3>
+      <div class="script"><p>您好，感谢您参加本次访谈。我们正在研究高温、空气污染和出行条件如何影响城市中的通勤者或户外活动者。本次访谈希望了解实际问题和用户需求，不会评价您的能力，也不会测试您的知识。所有回答都没有对错之分。</p><p>访谈大约需要二十五至三十分钟。参与完全出于自愿，您可以跳过任何问题，也可以在任何时候停止访谈。我们只会将您的回答用于课程研究，不会在报告中写出您的姓名。如果得到您的同意，我们会做一些记录。现在可以开始吗？</p></div>
+      <div class="interview-groups">
+        <details open><summary>主题一：日常出行情境与环境暴露<span class="count">第 1–5 题</span></summary><ol class="questions">
+          <li><span class="question-num" aria-hidden="true">01</span><div><h4>请您详细讲述最近一次出行，从准备出门开始，一直到抵达目的地为止。</h4><p class="probe"><strong>可能追问：</strong>这次出行中哪些部分最容易预料？哪些部分出现了意外变化？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">02</span><div><h4>当您选择出发时间、路线或交通方式时，通常会受到哪些因素影响？</h4><p class="probe"><strong>可能追问：</strong>您能否描述一次某个因素比平时更加重要的经历？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">03</span><div><h4>您日常出行的哪些路段最容易让您暴露在高温、交通尾气、拥挤或户外等待环境中？</h4><p class="probe"><strong>可能追问：</strong>为什么您很难避开这个地点或路段？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">04</span><div><h4>请讲述一次最近因为天气、空气质量或交通状况而改变出行方式的经历。</h4><p class="probe"><strong>可能追问：</strong>当时您采取了什么替代做法？最后结果如何？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">05</span><div><h4>什么因素会让一条路线或一个等候区域对您来说更安全、更容易应对？什么因素会让它变得不安全或令人疲惫？</h4><p class="probe"><strong>可能追问：</strong>现场的设施、服务或周围的社会环境会不会改变您的感受？</p></div></li>
+        </ol></details>
+        <details open><summary>主题二：健康影响与风险判断<span class="count">第 6–10 题</span></summary><ol class="questions" start="6">
+          <li><span class="question-num" aria-hidden="true">06</span><div><h4>当您在非常炎热或空气污染严重的环境中出行或工作时，会注意到哪些身体或心理上的影响？</h4><p class="probe"><strong>可能追问：</strong>您通常什么时候最先察觉到这些影响？它们会如何影响当天剩余时间？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">07</span><div><h4>请描述一次您觉得环境状况可能损害健康的经历。</h4><p class="probe"><strong>可能追问：</strong>当时是什么信息或个人经历让您形成了这种判断？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">08</span><div><h4>您如何判断高温或污染警告是否严重到足以让您改变原来的计划？</h4><p class="probe"><strong>可能追问：</strong>什么信息或支持可以让您更容易、更有把握地做出决定？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">09</span><div><h4>高温、空气污染或困难的出行条件，曾经怎样影响您的工作、学习、照护责任或其他日常安排？</h4><p class="probe"><strong>可能追问：</strong>对您影响最大的是哪一方面？为什么？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">10</span><div><h4>一个提供健康出行建议的服务，在给您建议之前应该了解您的哪些个人情况？</h4><p class="probe"><strong>可能追问：</strong>有没有一些情况下，笼统的建议会对您没有帮助，甚至不安全？</p></div></li>
+        </ol></details>
+        <details open><summary>主题三：当前应对方式、现实障碍与信任<span class="count">第 11–15 题</span></summary><ol class="questions" start="11">
+          <li><span class="question-num" aria-hidden="true">11</span><div><h4>在高温或空气污染严重的出行过程中，您目前会采取哪些措施来减少不适或健康风险？</h4><p class="probe"><strong>可能追问：</strong>哪种方式最有效？哪种方式最难坚持？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">12</span><div><h4>当您决定如何应对困难出行条件时，通常会依靠哪些工具、人员或信息来源？</h4><p class="probe"><strong>可能追问：</strong>您喜欢这些来源提供的哪些支持？又有哪些地方不满意？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">13</span><div><h4>在一次有风险的出行中，是什么原因阻止您采取自己认为最有利于健康的做法？</h4><p class="probe"><strong>可能追问：</strong>主要障碍来自时间、费用、工作或学校规定、行动能力、信息不足，还是其他原因？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">14</span><div><h4>请回想一次您必须在准时到达和保护健康之间做出选择的经历。您当时是如何权衡的？</h4><p class="probe"><strong>可能追问：</strong>当时什么变化可能会让您做出不同的决定？</p></div></li>
+          <li><span class="question-num" aria-hidden="true">15</span><div><h4>一个新服务要提供环境暴露和出行建议，需要具备什么条件，才能让您信任它提供的信息？</h4><p class="probe"><strong>可能追问：</strong>哪些情况会让您停止使用它，或开始怀疑它的建议？</p></div></li>
+        </ol></details>
+      </div>
+      <div class="closing"><h3>访谈结束</h3><div class="script"><p>以上就是我们计划提出的问题。关于在高温或空气污染环境中出行，还有没有什么重要内容是我没有问到的？您还希望研究人员了解这个问题的哪些方面？</p><p>感谢您分享自己的经历。您的回答将帮助我们理解这个问题，以及潜在用户的实际需求。</p></div></div>
+    </div></section>
+
+    <section id="survey" aria-labelledby="survey-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">05</span><h2 id="survey-title">问卷方案</h2></div>
+      <p class="lead">本匿名问卷了解您日常出行以及高温、空气污染暴露情况，预计需要五至七分钟。请选择最符合您情况的答案。涉及健康状况的问题可以不回答，任何题目都可以跳过。</p>
+      <p class="muted">以下为问卷题目与选项的研究版本，不在本页提交或保存个人回答。</p>
+      <div class="survey-groups">
+        <details open><summary>基本情况与出行暴露<span class="count">第 1–10 题</span></summary><ol class="questions">
+          <li><span class="question-num" aria-hidden="true">01</span><div><span class="type">单选</span><h4>您属于以下哪个年龄段？</h4><ul class="options"><li>十八岁以下</li><li>十八至二十四岁</li><li>二十五至三十四岁</li><li>三十五至四十四岁</li><li>四十五至五十四岁</li><li>五十五至六十四岁</li><li>六十五岁及以上</li><li>不愿回答</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">02</span><div><span class="type">单选</span><h4>以下哪项最符合您目前的身份？</h4><ul class="options"><li>学生</li><li>全职工作者</li><li>兼职工作者</li><li>个体经营者</li><li>失业或正在找工作</li><li>退休人员</li><li>照护者</li><li>其他</li><li>不愿回答</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">03</span><div><span class="type">可选单选</span><h4>您是否患有某种疾病，或正在服用某种药物，使您更难应对高温、空气污染或较为费力的出行？</h4><ul class="options"><li>是</li><li>否</li><li>不确定</li><li>不愿回答</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">04</span><div><span class="type">多选</span><h4>哪些无障碍功能会让健康出行服务更容易使用？</h4><ul class="options"><li>大字体</li><li>高对比度</li><li>适合色觉障碍者的配色</li><li>兼容屏幕阅读器</li><li>语音说明</li><li>振动或视觉提醒</li><li>多语言</li><li>简明语言</li><li>以上都不需要</li><li>其他</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">05</span><div><span class="type">多选</span><h4>您平时会使用哪些交通方式进行通勤或必要出行？</h4><ul class="options"><li>步行</li><li>自行车或电动滑板车</li><li>公交车</li><li>地铁或火车</li><li>私家车</li><li>出租车或网约车</li><li>摩托车</li><li>其他</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">06</span><div><span class="type">单选</span><h4>您通常每周有几天需要通勤或进行必要出行？</h4><ul class="options"><li>零至一天</li><li>两至三天</li><li>四至五天</li><li>六至七天</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">07</span><div><span class="type">单选</span><h4>您通常单程出行需要多长时间？</h4><ul class="options"><li>少于十五分钟</li><li>十五至二十九分钟</li><li>三十至五十九分钟</li><li>六十至八十九分钟</li><li>九十分钟或更久</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">08</span><div><span class="type">单选</span><h4>在一次典型出行中，您大约有多长时间在户外或户外等候？</h4><ul class="options"><li>几乎没有</li><li>少于十五分钟</li><li>十五至二十九分钟</li><li>三十至五十九分钟</li><li>六十分钟或更久</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">09</span><div><span class="type">单选</span><h4>出发前，您查看天气、高温或空气质量信息的频率如何？</h4><ul class="options"><li>从不</li><li>很少</li><li>有时</li><li>经常</li><li>总是</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">10</span><div><span class="type">单选</span><h4>过去三个月中，您有多少次因为高温、空气污染或恶劣天气而改变、推迟或取消出行？</h4><ul class="options"><li>从没有</li><li>一次</li><li>两至三次</li><li>四至五次</li><li>超过五次</li><li>不确定</li></ul></div></li>
+        </ol></details>
+        <details open><summary>提醒偏好与决策限制<span class="count">第 11–18 题</span></summary><ol class="questions" start="11">
+          <li><span class="question-num" aria-hidden="true">11</span><div><span class="type">排序题</span><h4>请按照重要程度排列您规划出行时最看重的因素。</h4><ul class="options"><li>到达时间</li><li>费用</li><li>可靠性</li><li>人身安全</li><li>身体舒适度</li><li>高温和空气污染暴露</li><li>无障碍程度</li><li>是否有遮阴处或室内避暑空间</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">12</span><div><span class="type">单选</span><h4>您希望在什么时候收到环境健康风险提醒？</h4><ul class="options"><li>前一天晚上</li><li>出发前一至三小时</li><li>出发前十五至三十分钟</li><li>出行过程中</li><li>只有风险变得严重时</li><li>我不希望接收提醒</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">13</span><div><span class="type">最多选择三项</span><h4>以下哪些提醒形式最容易引起您的注意？</h4><ul class="options"><li>横幅通知</li><li>声音</li><li>振动</li><li>语音播报</li><li>智能手表通知</li><li>短信</li><li>电子邮件</li><li>应用内消息</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">14</span><div><span class="type">单选</span><h4>风险提醒中应该首先显示哪类信息？</h4><ul class="options"><li>当前风险等级</li><li>预计持续时间</li><li>建议采取的防护措施</li><li>更安全的出行时间</li><li>更安全的路线</li><li>附近的室内或遮阴地点</li><li>数据来源说明</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">15</span><div><span class="type">五级量表</span><h4>如果可信赖的服务提醒您计划中的出行存在较高健康风险，您有多大可能调整路线或时间安排？</h4><ul class="options scale"><li>非常不可能</li><li>不太可能</li><li>说不清</li><li>比较可能</li><li>非常可能</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">16</span><div><span class="type">五级量表</span><h4>如果应用使用您的大致位置来提供本地环境信息，您对此有多大程度的接受度？</h4><ul class="options scale"><li>非常不接受</li><li>不接受</li><li>说不清</li><li>接受</li><li>非常接受</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">17</span><div><span class="type">多选</span><h4>哪些信息来源会让您认为环境健康风险提醒更可信？</h4><ul class="options"><li>政府空气质量数据</li><li>气象服务数据</li><li>公共卫生机构</li><li>当地交通数据</li><li>医生建议</li><li>其他用户报告</li><li>大学或研究机构</li><li>我需要更多信息</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">18</span><div><span class="type">多选</span><h4>哪些因素可能使您难以采用推荐的更安全出行方式？</h4><ul class="options"><li>需要花费太长时间</li><li>费用更高</li><li>可能错过工作或课程</li><li>公共交通不够便利</li><li>无法改变时间安排</li><li>行动能力有限</li><li>需要照护他人</li><li>推荐可能不可靠</li><li>隐私顾虑</li><li>其他</li></ul></div></li>
+        </ol></details>
+        <details open><summary>包容性、隐私与开放反馈<span class="count">第 19–21 题</span></summary><ol class="questions" start="19">
+          <li><span class="question-num" aria-hidden="true">19</span><div><span class="type">五级量表</span><h4>您认为让不同语言、能力和健康需求的人都能顺利使用这项服务有多重要？</h4><ul class="options scale"><li>完全不重要</li><li>不太重要</li><li>一般重要</li><li>非常重要</li><li>极其重要</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">20</span><div><span class="type">多选</span><h4>在使用这类服务之前，您希望它提供哪些隐私控制？</h4><ul class="options"><li>仅在使用应用时允许定位</li><li>可以使用大致区域而不是精确位置</li><li>清楚地说明数据用途</li><li>可以删除历史记录</li><li>不与广告商共享信息</li><li>无需创建账户也能使用</li><li>其他</li></ul></div></li>
+          <li><span class="question-num" aria-hidden="true">21</span><div><span class="type">开放题</span><h4>请用一至两句话说明，怎样的信息才能让您在日常出行中觉得高温和空气污染信息真正有用。</h4></div></li>
+        </ol></details>
+      </div>
+    </div></section>
+
+    <section id="access" aria-labelledby="access-title"><div class="wrap">
+      <div class="section-heading"><span class="section-index" aria-hidden="true">06</span><h2 id="access-title">伦理与可访问性</h2></div>
+      <div class="protection-grid">
+        <div><h3>自愿参与与隐私</h3><ul><li>访谈前取得同意，任何问题均可跳过，参与者可随时停止。</li><li>访谈使用 U01–U04 编号，公开成果不披露真实姓名、电话、精确住址或具体诊断。</li><li>健康问题可选；匿名问卷不索取联系方式或精确位置。</li><li>研究记录仅用于课程研究，限制访问范围；对外展示汇总内容和去标识化引述。</li><li>若招募未成年人，须先落实课程与学校要求的监护人同意流程。</li></ul></div>
+        <div><h3>让不同需求都被考虑</h3><ul><li>提供清晰语言与较大字号，兼顾高对比度、色觉差异和屏幕阅读器。</li><li>访谈时间与形式可按参与者需要调整，允许休息或由研究者朗读题目。</li><li>后续设计考虑语音、振动、多语言和低数字技能用户的使用条件。</li><li>定位采用最小必要原则，优先验证大致区域及可控授权。</li><li>研究结论说明样本规模与学生招募的局限，避免泛化到所有出行人群。</li></ul></div>
+      </div>
+    </div></section>
   </main>
-  <footer>空气慧行项目组 · 人机交互实验 4 · 研究阶段网站</footer>
+  <footer><div class="wrap footer-row"><span>空气慧行项目组 · 人机交互实验 4 · 研究规划阶段</span><a href="#top">返回顶部</a></div></footer>
 </body>
 </html>
