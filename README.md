@@ -15,6 +15,6 @@
 
 这是一个使用 Vue 3 和 Vite 构建的组件化前端项目。页面内容位于 `src/`，`index.html` 只是 Vite 的应用入口。执行 `npm install` 后可使用 `npm run dev` 本地预览，使用 `npm run build` 生成发布文件。GitHub Pages 通过 GitHub Actions 从 `main` 分支构建并部署。
 
-访谈与问卷依据《P2_Planning_Data_Collection_AirAware》整理，实验五分析使用已整理的 12 份匿名问卷和四位学生访谈记录。统计仅描述当前课程样本，不据小样本推断总体。
+
 
 封面图片来源：[Unsplash 城市街道照片](https://images.unsplash.com/photo-1449824913935-59a10b8d2000)，按 [Unsplash License](https://unsplash.com/license) 使用。图片只用于说明出行环境，不是调研现场记录。
