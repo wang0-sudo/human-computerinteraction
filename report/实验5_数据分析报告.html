@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>空气慧行｜实验五数据分析报告</title>
+  <style>
+    @page { size: A4; margin: 2.1cm 2.2cm 2.2cm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #222; background: #fff; font-family: "Times New Roman", "Noto Serif CJK SC", SimSun, serif; font-size: 12pt; line-height: 1.5; }
+    h1, h2, h3, h4 { margin: 0 0 10pt; line-height: 1.3; }
+    h1 { font-size: 24pt; text-align: center; margin-top: 18pt; }
+    h2 { font-size: 17pt; margin-top: 22pt; padding-bottom: 4pt; border-bottom: 1pt solid #375d4b; }
+    h3 { font-size: 14pt; margin-top: 16pt; }
+    h4 { font-size: 12pt; }
+    p { margin: 0 0 9pt; text-align: justify; }
+    a { color: #185c48; }
+    .cover { min-height: 235mm; display: flex; flex-direction: column; justify-content: center; }
+    .eyebrow { text-align: center; color: #185c48; font-size: 13pt; }
+    .meta { width: 100%; margin: 28pt auto 0; border-collapse: collapse; }
+    .meta th, .meta td { padding: 6pt 8pt; text-align: left; border-bottom: .5pt solid #aaa; }
+    .meta th { width: 28%; font-weight: normal; color: #555; }
+    .small { color: #555; font-size: 10.5pt; }
+    .page-break { break-before: page; }
+    .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13pt 20pt; margin: 12pt 0; }
+    .chart { break-inside: avoid; }
+    .chart-title { font-weight: bold; margin-bottom: 4pt; }
+    .chart-note { color: #555; font-size: 9pt; margin-bottom: 7pt; }
+    .bar-row { display: grid; grid-template-columns: 34% 46% 20%; align-items: center; gap: 5pt; margin: 4pt 0; font-size: 9pt; }
+    .track { height: 9pt; background: #e6eee9; }
+    .fill { height: 100%; background: #2e6c56; }
+    .fill.alt { background: #a95b3a; }
+    .value { text-align: right; color: #555; white-space: nowrap; }
+    table { width: 100%; border-collapse: collapse; margin: 9pt 0 12pt; font-size: 10pt; }
+    th, td { padding: 5pt 6pt; border: .5pt solid #aaa; vertical-align: top; text-align: left; }
+    th { background: #edf3ef; }
+    .insights li { margin-bottom: 6pt; }
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8pt; margin: 10pt 0 14pt; }
+    .process-step { padding: 8pt; border-top: 2pt solid #a95b3a; background: #f7f3ed; break-inside: avoid; }
+    .step-number { color: #a95b3a; font-weight: bold; }
+    .process-step p { font-size: 9pt; text-align: left; }
+    .board { display: grid; grid-template-columns: 1fr 1fr; gap: 11pt; }
+    .cluster { padding: 9pt; background: #f3f7f4; border-top: 2pt solid #2e6c56; break-inside: avoid; }
+    .cluster:nth-child(2n) { background: #fbf3ef; border-top-color: #a95b3a; }
+    .cluster:nth-child(3n) { background: #f1f7f7; border-top-color: #3c7780; }
+    .cluster h4 { margin-bottom: 4pt; }
+    .subthemes { color: #555; font-size: 9pt; margin-bottom: 7pt; }
+    .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 5pt; margin: 0; padding: 0; list-style: none; }
+    .notes li { min-height: 34pt; padding: 5pt; background: #fff2af; font-size: 8.5pt; line-height: 1.35; }
+    .notes li:nth-child(3n + 2) { background: #dff0e5; }
+    .notes li:nth-child(3n) { background: #f7dfd1; }
+    .contribution { margin-top: 18pt; padding-top: 8pt; border-top: 1pt solid #999; }
+    .footer-note { margin-top: 20pt; color: #555; font-size: 9.5pt; }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <p class="eyebrow">人机交互实验课作业 5 · Data Analysis</p>
+    <h1>空气慧行：数据分析报告</h1>
+    <p style="text-align:center">城市高温与空气污染下的健康出行研究</p>
+    <table class="meta">
+      <tr><th>团队名称</th><td>空气慧行项目组</td></tr>
+      <tr><th>团队成员</th><td>王誉达</td></tr>
+      <tr><th>项目网站</th><td><a href="https://wang0-sudo.github.io/human-computerinteraction/">https://wang0-sudo.github.io/human-computerinteraction/</a></td></tr>
+      <tr><th>项目描述</th><td>研究高温、空气污染和城市出行条件如何影响学生及其他必要出行者的健康感受、风险判断和出行选择，为后续移动端健康出行服务设计提供研究依据。</td></tr>
+    </table>
+  </section>
+
+  <section class="page-break">
+    <h2>1. 研究背景与分析方法</h2>
+    <p>空气慧行关注必须出门的城市出行者。上课、实习和日常通勤通常不能因为高温或空气污染而取消，步行、骑行和公共交通使用者还可能在无遮阴道路、拥堵路口或露天站点经历持续暴露。前期研究通过半结构式访谈和匿名问卷收集出行情境、健康感受、风险判断、应对方式、现实障碍和信息信任需求。</p>
+    <p>本次分析包含两部分。问卷部分使用描述统计，报告人口统计信息、出行暴露、提醒偏好和决策限制，并用条形图展示人数与比例。访谈部分使用亲和图方法，将记录拆成单一观察便签，经过提取、初步归类、比较合并和综合命名，形成上位主题与子主题。</p>
+    <p class="small">问卷样本量为 n=12，访谈对象为四位学生，编号使用 U01–U04。多选题按照选择该选项的人数计算，各选项可以重复选择。访谈便签使用去标识化表达。</p>
+
+    <h2>2. 问卷数据分析</h2>
+    <h3>2.1 人口统计描述</h3>
+    <div class="chart-grid">
+      <div class="chart"><div class="chart-title">年龄段（第 1 题）</div><div class="chart-note">单选，n=12</div>
+        <div class="bar-row"><span>18–24 岁</span><span class="track"><span class="fill" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>25–34 岁</span><span class="track"><span class="fill" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>35–44 岁</span><span class="track"><span class="fill" style="display:block;width:16.7%"></span></span><span class="value">2 · 16.7%</span></div>
+        <div class="bar-row"><span>45–54 岁</span><span class="track"><span class="fill" style="display:block;width:16.7%"></span></span><span class="value">2 · 16.7%</span></div>
+        <div class="bar-row"><span>55–64 岁</span><span class="track"><span class="fill" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+        <div class="bar-row"><span>65 岁及以上</span><span class="track"><span class="fill" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+      </div>
+      <div class="chart"><div class="chart-title">当前身份（第 2 题）</div><div class="chart-note">单选，n=12</div>
+        <div class="bar-row"><span>全职工作者</span><span class="track"><span class="fill alt" style="display:block;width:33.3%"></span></span><span class="value">4 · 33.3%</span></div>
+        <div class="bar-row"><span>学生</span><span class="track"><span class="fill alt" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>兼职工作者</span><span class="track"><span class="fill alt" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+        <div class="bar-row"><span>户外工作者</span><span class="track"><span class="fill alt" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+        <div class="bar-row"><span>个体经营者</span><span class="track"><span class="fill alt" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+        <div class="bar-row"><span>照护者</span><span class="track"><span class="fill alt" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+        <div class="bar-row"><span>退休人员</span><span class="track"><span class="fill alt" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+      </div>
+    </div>
+
+    <h3>2.2 主要发现</h3>
+    <div class="chart-grid">
+      <div class="chart"><div class="chart-title">典型出行的户外时间（第 8 题）</div>
+        <div class="bar-row"><span>少于 15 分钟</span><span class="track"><span class="fill" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>15–29 分钟</span><span class="track"><span class="fill" style="display:block;width:41.7%"></span></span><span class="value">5 · 41.7%</span></div>
+        <div class="bar-row"><span>30–59 分钟</span><span class="track"><span class="fill" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>60 分钟或更久</span><span class="track"><span class="fill" style="display:block;width:8.3%"></span></span><span class="value">1 · 8.3%</span></div>
+      </div>
+      <div class="chart"><div class="chart-title">更安全出行的现实障碍（第 18 题）</div><div class="chart-note">多选，n=12</div>
+        <div class="bar-row"><span>时间安排难改变</span><span class="track"><span class="fill alt" style="display:block;width:75%"></span></span><span class="value">9 · 75.0%</span></div>
+        <div class="bar-row"><span>费用更高</span><span class="track"><span class="fill alt" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>推荐可能不可靠</span><span class="track"><span class="fill alt" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>隐私顾虑</span><span class="track"><span class="fill alt" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+        <div class="bar-row"><span>公共交通不便</span><span class="track"><span class="fill alt" style="display:block;width:25%"></span></span><span class="value">3 · 25.0%</span></div>
+      </div>
+    </div>
+    <p>样本中 3/12（25.0%）为学生，9/12（75.0%）的典型出行有至少 15 分钟户外暴露。无法改变时间安排是最突出的现实限制，说明风险提醒需要同时提供可以执行的时间、路线或避暑地点建议。提醒时间方面，10/12（83.3%）偏好出发前 1–30 分钟收到信息；可信度方面，气象服务数据和政府空气质量数据获得较多选择。大致位置的接受度均值为 3.67/5，低于因高风险调整计划的可能性均值 4.17/5，提示用户更愿意采取健康行动，但仍然需要清楚、可控的位置授权。</p>
+
+    <h3>2.3 量表描述</h3>
+    <table><caption>五级量表分布（1 → 5）</caption><thead><tr><th>题目</th><th>各选项人数</th><th>均值</th></tr></thead><tbody>
+      <tr><td>因高风险调整路线或时间（第 15 题）</td><td>0、0、2、6、4 人</td><td>4.17 / 5</td></tr>
+      <tr><td>接受大致位置提供本地信息（第 16 题）</td><td>0、2、2、6、2 人</td><td>3.67 / 5</td></tr>
+      <tr><td>认为服务可访问性重要（第 19 题）</td><td>0、0、0、7、5 人</td><td>4.42 / 5</td></tr>
+    </tbody></table>
+    <p>问卷分析让我看到，环境健康信息的价值不能只用“用户是否愿意查看”来判断。出行者可能认可提醒，也愿意提供大致位置，但固定课程、费用和班次限制会阻止其执行推荐方案。一个更合理的设计方向，是把风险等级、风险原因、持续时间和替代选择放在同一决策路径中，并提供大字体、高对比度、语音或振动等可访问表达。</p>
+  </section>
+
+  <section class="page-break">
+    <h2>3. 访谈数据分析：亲和图</h2>
+    <h3>3.1 提取到综合的过程</h3>
+    <p>访谈分析以四位学生的出行情境为基础。先把每条观察拆成一张便签，使“一个便签只表达一个意思”；随后将相近内容放在一起，再比较不同情境之间的共同点和差异。最终保留 36 张便签，形成 6 个上位主题和 12 个子主题。</p>
+    <div class="process">
+      <div class="process-step"><div class="step-number">01 提取</div><p>将出行情境、环境暴露、健康感受、应对和信息需要拆成单一观察便签。</p></div>
+      <div class="process-step"><div class="step-number">02 初步归类</div><p>按出行情境、环境风险、身体影响、应对方式和使用条件放置便签。</p></div>
+      <div class="process-step"><div class="step-number">03 比较合并</div><p>合并重复含义，保留时间、费用、交通、可信度和可访问性之间的差异。</p></div>
+      <div class="process-step"><div class="step-number">04 综合命名</div><p>把便签群命名为上位主题，并用子主题说明主题内部的关系。</p></div>
+    </div>
+    <p class="small">图 1：数字化亲和图过程记录。每个阶段对应一个可复核的整理动作，最终结构同时保留上位主题和子主题关系。</p>
+
+    <h3>3.2 最终数字化亲和图</h3>
+    <div class="board">
+      <article class="cluster"><h4>主题 01：出行有刚性安排</h4><p class="subthemes">子主题：课程、实习时间固定；时间与费用限制替代选择</p><ul class="notes"><li>上课开始时间限制出发时段</li><li>错过班车可能造成较长延误</li><li>天气差也必须按时到达</li><li>打车费用超出日常预算</li><li>常走路线的环境状况每天不同</li><li>露天候车时间难以自己控制</li></ul></article>
+      <article class="cluster"><h4>主题 02：环境风险发生在具体路段</h4><p class="subthemes">子主题：热、尾气与等待点；区域数据解释不了个人路线</p><ul class="notes"><li>不同公交站的遮阴条件差别明显</li><li>路口等灯时会感到车辆尾气</li><li>绕行可能减少暴露但会迟到</li><li>换乘步行路段常处于直晒环境</li><li>区域空气质量值不能代表每段道路</li><li>湿热、降雨和高温会一起影响舒适度</li></ul></article>
+      <article class="cluster"><h4>主题 03：身体感受参与风险判断</h4><p class="subthemes">子主题：不适影响学习与精力；抽象预警缺少个人语境</p><ul class="notes"><li>疲惫或头痛会影响后续专注</li><li>预警等级不容易转化成行动</li><li>单个预测数值缺少路线语境</li><li>显示数据来源和更新时间更容易信任</li><li>用户希望得到一般健康信息而非诊断</li><li>暴露持续多久往往不明确</li></ul></article>
+      <article class="cluster"><h4>主题 04：健康应对受到现实条件限制</h4><p class="subthemes">子主题：个人防护方式；时间、交通和费用权衡</p><ul class="notes"><li>饮水和遮阳伞是常见自我应对</li><li>固定课程时间使改期难以实行</li><li>有可选室内空间时会避开户外等待</li><li>防护用品可能带来闷热或不适</li><li>班次间隔会延长户外等候</li><li>选择常在时间、费用和健康间折中</li></ul></article>
+      <article class="cluster"><h4>主题 05：信息需要转化为可执行建议</h4><p class="subthemes">子主题：合适的提醒时机；原因、时长与替代选择</p><ul class="notes"><li>出发前收到提醒比到达后更有帮助</li><li>建议应说明风险原因和大致时长</li><li>附近室内地点可作为替代选项</li><li>风险等级需要简洁且含义清楚</li><li>静音振动适合不便听声音的场景</li><li>提醒频率应由用户控制以免过载</li></ul></article>
+      <article class="cluster"><h4>主题 06：可访问性、隐私与可信度缺一不可</h4><p class="subthemes">子主题：多种信息呈现方式；位置授权和信息透明</p><ul class="notes"><li>较大字号能降低阅读负担</li><li>高对比度有助于户外查看</li><li>风险不能只靠颜色区分</li><li>语音朗读可支持不同使用情境</li><li>大致位置可减少精确定位顾虑</li><li>要说明数据来源、更新时间和不确定性</li></ul></article>
+    </div>
+    <p class="small">图 2：最终数字化亲和图。36 张便签被聚合为 6 个上位主题，每个上位主题包含 2 个子主题。</p>
+
+    <h3>3.3 访谈分析反思</h3>
+    <p>亲和图让我看到，参与者面对的核心困难是多种约束的叠加，而不是缺少某一条天气信息。出行者需要在准时、费用、交通可用性、身体舒适和健康风险之间做出取舍；环境风险往往发生在具体路段和等待点，区域级数据不一定能直接指导行动。后续设计应该把风险解释、出发时间、路线条件和附近可用空间放在同一情境中，同时让用户控制定位授权、提醒频率和信息呈现方式。</p>
+    <p>亲和图中较出乎意料的地方，是“愿意接收信息”和“能够改变安排”之间存在明显距离。参与者可能信任数据来源，也认可可访问性，但固定上课或实习时间仍然会限制选择。因此，后续原型评价需要关注用户能否在真实时间压力下理解建议并采取行动，而不只是询问他们是否喜欢界面。</p>
+  </section>
+
+  <section class="page-break">
+    <h2>4. 结论与后续方向</h2>
+    <p>问卷描述统计和访谈亲和图共同指向一个研究结论：健康出行支持需要同时处理环境暴露、个人感受和现实行动条件。高温或空气污染提醒只有在解释风险、给出提前量、提供可执行替代方案并尊重隐私与可访问性时，才有机会帮助用户进行更稳妥的出行决策。</p>
+    <p>后续工作包括扩大问卷样本、补充不同职业和年龄段的参与者、对四位学生访谈进行逐字编码，并用更多数据复核当前主题。原型评价可以围绕“能否理解风险”“能否找到可执行选择”“是否愿意授权大致位置”和“是否能在户外环境中完成阅读或听取信息”设计任务。</p>
+    <div class="contribution"><h3>团队贡献</h3><p>王誉达完成项目说明、访谈与问卷设计、数据分析报告初稿、问卷描述统计结构、访谈亲和图整理和网站内容组织，并负责最终修改、格式检查与提交前审核。</p></div>
+    <p class="footer-note">项目网站包含团队介绍、项目方案、访谈方案、问卷方案、实验五数据分析和数字化亲和图：<a href="https://wang0-sudo.github.io/human-computerinteraction/">https://wang0-sudo.github.io/human-computerinteraction/</a></p>
+  </section>
+</body>
+</html>
