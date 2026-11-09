@@ -18,7 +18,7 @@ import {
   surveyData,
   teamData,
 } from './data/research.js';
-import { modelingData } from './data/modeling.js';
+import { designModels as modelingData } from './data/design-models.js';
 
 const activeSection = ref('team');
 let observer;

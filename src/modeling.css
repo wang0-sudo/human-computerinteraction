@@ -1,0 +1,42 @@
+.design-flow { margin: 24px 0; }
+.design-flow svg { display: block; width: 100%; height: auto; }
+.design-flow figcaption { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 10px; }
+.design-relations { min-width: 660px; }
+.design-relations th:first-child { width: 25%; }
+.design-relations td { width: 37.5%; }
+.design-proposal { border-left: 3px solid var(--green); padding: 10px 18px; margin-top: 18px; }
+.design-evidence { color: var(--muted); font-size: 12px !important; line-height: 1.65; margin-top: 10px !important; }
+.design-persona-heading { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 16px; align-items: center; }
+.design-portrait { width: 86px; height: 86px; }
+.design-portrait svg { width: 100%; height: 100%; display: block; }
+.design-persona-heading h4 { font-size: 24px; color: var(--deep); margin-top: 4px; }
+.design-persona-heading p { margin-top: 2px; }
+.design-story { margin: 30px 0; border-top: 2px solid var(--green); padding-top: 18px; }
+.design-story:nth-of-type(even) { border-top-color: #347c88; }
+.design-story > h4 { font-size: 21px; color: var(--deep); }
+.design-story > p { margin-top: 7px; }
+.design-story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; list-style: none; padding: 0; margin: 20px 0; }
+.design-frame { min-width: 0; margin: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #fff; break-inside: avoid; }
+.design-scene { aspect-ratio: 36 / 23; width: 100%; border-bottom: 1px solid var(--line); }
+.design-scene svg { width: 100%; height: 100%; display: block; }
+.design-frame-copy { padding: 14px 16px; }
+.design-frame-copy h5 { margin: 0 0 10px; font-size: 16px; color: var(--deep); }
+.design-frame-copy p { font-size: 13px; line-height: 1.7; margin: 7px 0; }
+.design-emotion { color: #347c88; }
+.design-frame-copy .frame-outcome { border-top: 1px solid var(--line); padding-top: 9px; margin-top: 12px; color: var(--green); }
+.design-trace { min-width: 760px; }
+.design-trace td { font-size: 12px; }
+@media (max-width: 900px) {
+  .design-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 540px) {
+  .design-story-grid { grid-template-columns: 1fr; gap: 20px; }
+  .design-persona-heading { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+  .design-portrait { width: 64px; height: 64px; }
+  .persona-columns { grid-template-columns: 1fr; }
+  .design-frame-copy p { font-size: 14px; }
+  .design-flow { margin-inline: 0; }
+}
+@media print {
+  .design-story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
