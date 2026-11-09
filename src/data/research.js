@@ -5,6 +5,7 @@ export const navItems = [
   { id: 'interview', label: '访谈方案' },
   { id: 'survey', label: '问卷方案' },
   { id: 'analysis', label: '数据分析' },
+  { id: 'modeling', label: '实验六七：建模与故事板' },
   { id: 'access', label: '伦理与可访问性' },
 ];
 

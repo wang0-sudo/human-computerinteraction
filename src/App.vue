@@ -7,6 +7,7 @@ import InterviewSection from './components/InterviewSection.vue';
 import SurveySection from './components/SurveySection.vue';
 import AccessSection from './components/AccessSection.vue';
 import DataAnalysisSection from './components/DataAnalysisSection.vue';
+import ModelingSection from './components/ModelingSection.vue';
 import {
   accessData,
   analysisData,
@@ -17,6 +18,7 @@ import {
   surveyData,
   teamData,
 } from './data/research.js';
+import { modelingData } from './data/modeling.js';
 
 const activeSection = ref('team');
 let observer;
@@ -40,7 +42,7 @@ onBeforeUnmount(() => observer?.disconnect());
   <header class="site-header" id="top">
     <div class="wrap header-row">
       <a class="brand" href="#top">空气慧行</a>
-      <span class="course">人机交互实验 5 · 数据分析</span>
+      <span class="course">人机交互实验 6–7 · 交互建模与故事板</span>
     </div>
   </header>
 
@@ -66,12 +68,13 @@ onBeforeUnmount(() => observer?.disconnect());
     <InterviewSection :data="interviewData" />
     <SurveySection :data="surveyData" />
     <DataAnalysisSection :data="analysisData" />
+    <ModelingSection :data="modelingData" />
     <AccessSection :data="accessData" />
   </main>
 
   <footer>
     <div class="wrap footer-row">
-      <span>空气慧行项目组 · 人机交互实验 5 · 数据分析阶段</span>
+      <span>空气慧行项目组 · 人机交互实验 6–7 · 交互建模与故事板</span>
       <a href="#top">返回顶部</a>
     </div>
   </footer>

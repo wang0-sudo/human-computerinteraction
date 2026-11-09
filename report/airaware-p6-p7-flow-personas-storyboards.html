@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>空气慧行｜实验六七合并报告</title>
+  <style>
+    @page { size: A4; margin: 18mm 17mm 19mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #26342f; font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-size: 10.5pt; line-height: 1.65; }
+    h1, h2, h3, h4, h5, p { margin-top: 0; }
+    h1 { margin-bottom: 8mm; color: #163c30; font-size: 25pt; line-height: 1.3; text-align: center; }
+    h2 { margin: 0 0 5mm; padding-bottom: 2mm; border-bottom: 1px solid #185c48; color: #163c30; font-size: 16pt; break-after: avoid; }
+    h3 { margin: 6mm 0 2mm; color: #185c48; font-size: 12.5pt; break-after: avoid; }
+    h4 { margin: 0 0 2mm; color: #163c30; font-size: 11pt; }
+    p { margin-bottom: 3mm; text-align: justify; }
+    .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; break-after: page; }
+    .eyebrow { margin-bottom: 8mm; color: #a04c2d; text-align: center; font-weight: bold; }
+    .subtitle { margin-bottom: 15mm; text-align: center; color: #566a63; font-size: 13pt; }
+    .meta { width: 100%; border-collapse: collapse; margin-top: 8mm; }
+    .meta th, .meta td { padding: 3mm; border-bottom: .5px solid #dce5e0; text-align: left; vertical-align: top; }
+    .meta th { width: 28%; color: #566a63; font-weight: normal; }
+    .intro-note { margin-top: 10mm; padding: 4mm; border-left: 3px solid #a04c2d; background: #fbf2ec; }
+    section { margin-bottom: 8mm; }
+    .page-break { break-before: page; }
+    .actor-list { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 4mm 0; }
+    .actor { padding: 3mm; border-top: 2px solid #185c48; background: #f3f7f4; break-inside: avoid; }
+    .actor strong { display: block; color: #163c30; }
+    .actor span { color: #566a63; font-size: 9pt; }
+    table { width: 100%; border-collapse: collapse; margin: 4mm 0 6mm; font-size: 9pt; }
+    th, td { padding: 2.3mm; border: .5px solid #d2ddd6; vertical-align: top; text-align: left; }
+    th { background: #e8f0eb; color: #163c30; }
+    .stage-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; }
+    .stage { padding: 3mm; border-top: 2px solid #a04c2d; background: #fbf3ed; break-inside: avoid; }
+    .stage b { color: #a04c2d; }
+    .stage p { margin: 1mm 0 0; font-size: 8.5pt; }
+    .hmw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 5mm; }
+    .hmw { display: grid; grid-template-columns: 10mm 1fr; gap: 2mm; padding: 3mm 0; border-top: .5px solid #dce5e0; break-inside: avoid; }
+    .hmw-number { color: #185c48; font-size: 15pt; font-weight: bold; }
+    .focus { display: block; color: #a04c2d; font-size: 8pt; font-weight: bold; }
+    .hmw p { margin: 1mm 0 0; font-size: 9.5pt; }
+    .persona { padding: 5mm; border-top: 3px solid #185c48; background: #f3f7f4; break-inside: avoid; }
+    .persona + .persona { margin-top: 6mm; border-top-color: #3c7780; background: #f0f6f6; }
+    .persona-title { display: flex; justify-content: space-between; align-items: baseline; }
+    .persona-title h3 { margin: 0; font-size: 17pt; }
+    .persona-tag { color: #a04c2d; font-size: 9pt; font-weight: bold; }
+    .identity { margin: 1mm 0 4mm; color: #566a63; }
+    blockquote { margin: 4mm 0; padding: 3mm 4mm; border-left: 3px solid #a04c2d; background: #fff; color: #163c30; }
+    .persona-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+    ul { margin: 1mm 0 3mm; padding-left: 5mm; }
+    li { margin: 1mm 0; }
+    .evidence { margin-top: 4mm; padding-top: 3mm; border-top: .5px solid #d2ddd6; color: #566a63; font-size: 9pt; }
+    .story { break-before: page; }
+    .story-intro { margin-bottom: 5mm; color: #566a63; }
+    .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+    .frame { min-height: 67mm; padding: 4mm; border: .7px solid #dce5e0; border-top: 3px solid #185c48; background: #fbfcfb; break-inside: avoid; }
+    .story:nth-of-type(2) .frame { border-top-color: #3c7780; }
+    .frame-num { color: #a04c2d; font-weight: bold; }
+    .frame h4 { margin-top: 2mm; }
+    .frame p { margin-bottom: 2mm; font-size: 8.8pt; }
+    .outcome { padding-top: 2mm; border-top: .5px solid #dce5e0; color: #185c48; }
+    .conclusion { padding: 4mm; border-left: 3px solid #a04c2d; background: #fbf2ec; }
+    .foot { margin-top: 8mm; color: #66776f; font-size: 8.5pt; }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <p class="eyebrow">人机交互实验 · 实验六与实验七</p>
+    <h1>空气慧行：交互模型与用户体验设计</h1>
+    <p class="subtitle">关系流程模型 · HMW · 用户画像 · 故事板</p>
+    <table class="meta">
+      <tr><th>项目名称</th><td>空气慧行 AirAware</td></tr>
+      <tr><th>团队成员</th><td>王誉达</td></tr>
+      <tr><th>研究主题</th><td>城市高温与空气污染情境下的健康出行</td></tr>
+      <tr><th>项目网站</th><td>https://wang0-sudo.github.io/human-computerinteraction/</td></tr>
+      <tr><th>作业范围</th><td>实验六：关系流程模型与 HMW 问题；实验七：两份用户画像与两份故事板</td></tr>
+    </table>
+    <div class="intro-note"><strong>研究依据：</strong>本报告以实验四 U01–U04 学生访谈回答和实验五数据分析为基础，将日常出行情境、健康感受、固定日程、费用与时间约束、信任和可访问性需求转化为设计材料。</div>
+  </section>
+
+  <section>
+    <h2>1. 关系流程模型</h2>
+    <p>AirAware 关注的不只是用户与手机应用之间的信息传递，还包括用户为完成必要出行而与家人或同伴、交通与场所服务、环境数据来源之间的协调。用户保留决定权，应用负责整合分散信息、说明理由并呈现可比较的选择。</p>
+    <div class="actor-list">
+      <div class="actor"><strong>学生出行者</strong><span>表达出发时间、交通方式、预算、健康与无障碍约束；根据建议和现场情况作决定。</span></div>
+      <div class="actor"><strong>AirAware 移动端</strong><span>整合风险、路线、等待和休息信息，将通用风险转化为可比较的行动选择。</span></div>
+      <div class="actor"><strong>家人 / 同伴</strong><span>在必要出行、陪同和临时改约时提供支持；只接收用户选择分享的计划信息。</span></div>
+      <div class="actor"><strong>交通与场所服务</strong><span>提供到站、换乘、座椅、遮阴、饮水及室内停留条件等情境信息。</span></div>
+      <div class="actor"><strong>天气与空气质量来源</strong><span>提供可追溯的环境数据、风险等级、数据来源及更新时间。</span></div>
+    </div>
+    <table>
+      <thead><tr><th>发起方</th><th>关系 / 交换内容</th><th>接收方</th><th>设计含义</th></tr></thead>
+      <tbody>
+        <tr><td>天气与空气质量来源</td><td>环境数据、来源与更新时间</td><td>AirAware</td><td>让建议可解释、可核验</td></tr>
+        <tr><td>交通与场所服务</td><td>到站、等待和可停留地点</td><td>AirAware</td><td>补足区域指标与真实路段之间的差距</td></tr>
+        <tr><td>学生出行者</td><td>时间、预算、路线和个人需求</td><td>AirAware</td><td>把通用风险转化为个人决策</td></tr>
+        <tr><td>AirAware</td><td>提醒、替代路线与行动理由</td><td>学生出行者</td><td>支持出发前和途中调整</td></tr>
+        <tr><td>学生出行者</td><td>共享计划或求助请求</td><td>家人 / 同伴</td><td>在需要陪同或接送时减少沟通成本</td></tr>
+        <tr><td>AirAware</td><td>用户选择分享的可访问计划摘要</td><td>家人 / 同伴</td><td>让支持者了解时间和计划变化，同时尊重隐私</td></tr>
+      </tbody>
+    </table>
+    <h3>端到端流程</h3>
+    <div class="stage-grid">
+      <div class="stage"><b>01 表达约束</b><p>设置出发时间、目的地、交通方式，以及座椅、语音或减少户外等待等需求。</p></div>
+      <div class="stage"><b>02 合并信息</b><p>结合天气、空气质量、到站、等待、遮阴和可停留地点信息。</p></div>
+      <div class="stage"><b>03 比较选择</b><p>比较原路线、少暴露路线和延后出发方案，查看时间、费用和暴露取舍。</p></div>
+      <div class="stage"><b>04 协调支持</b><p>需要时分享简明计划，获得陪同、接送或临时调整支持。</p></div>
+      <div class="stage"><b>05 途中反馈</b><p>用户根据身体感受、实际等待和现场条件调整计划，保留最终决定权。</p></div>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>2. HMW 设计问题</h2>
+    <p>HMW（How Might We）以开放问题界定设计空间。问题由访谈和问卷发现提炼，不预设唯一解决方案。</p>
+    <div class="hmw-grid">
+      <div class="hmw"><span class="hmw-number">01</span><div><span class="focus">固定日程</span><p>我们如何帮助必须准时到课或到达目的地的学生，在高温或空气质量较差时降低户外暴露，而不只是告诉他们“不要出门”？</p></div></div>
+      <div class="hmw"><span class="hmw-number">02</span><div><span class="focus">路线解释</span><p>我们如何让用户一眼理解环境风险会在哪一段路线、持续多久，并据此比较不同出行方案？</p></div></div>
+      <div class="hmw"><span class="hmw-number">03</span><div><span class="focus">隐私控制</span><p>我们如何在不要求精确位置和健康诊断的情况下，提供足够贴合个人情境的提醒？</p></div></div>
+      <div class="hmw"><span class="hmw-number">04</span><div><span class="focus">可访问性</span><p>我们如何帮助需要座椅、遮阴、饮水或语音提示的用户，找到更容易坚持的等候与休息地点？</p></div></div>
+      <div class="hmw"><span class="hmw-number">05</span><div><span class="focus">现实约束</span><p>我们如何帮助户外骑行或兼职工作的学生，在收入和时间限制下安排真正可执行的休息与补水？</p></div></div>
+      <div class="hmw"><span class="hmw-number">06</span><div><span class="focus">信息可信</span><p>我们如何让空气质量建议同时呈现数据来源、更新时间和建议理由，使用户愿意信任并复核它？</p></div></div>
+      <div class="hmw"><span class="hmw-number">07</span><div><span class="focus">协作支持</span><p>我们如何让家人或同伴在用户需要陪同、接送或临时改变计划时参与支持，同时不替用户控制决定？</p></div></div>
+      <div class="hmw"><span class="hmw-number">08</span><div><span class="focus">途中应对</span><p>我们如何在途中出现晚点、施工或身体不适时，提供低打扰且可立即执行的下一步选择？</p></div></div>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>3. 主要用户画像</h2>
+    <article class="persona">
+      <div class="persona-title"><h3>林然</h3><span class="persona-tag">画像 A · 来源 U01</span></div>
+      <p class="identity">21 岁 · 本科生 · 步行 + 地铁</p>
+      <blockquote>“如果能告诉我哪条路线少在户外停留，我会更愿意改变。”</blockquote>
+      <p>林然每天需要按课表到校，考试周尤其不能迟到。她会查看天气和空气质量，但当前信息很少解释具体路线、站口等候和到达时间之间的关系。</p>
+      <div class="persona-cols"><div><h4>目标</h4><ul><li>准时到达教室</li><li>减少站口与路口的户外等待</li><li>用较低费用获得可信建议</li></ul></div><div><h4>困难</h4><ul><li>绕行可能多花十几分钟</li><li>打车费用无法日常承担</li><li>只显示颜色或“减少外出”不够具体</li></ul></div></div>
+      <h4>设计需要关注</h4><p>出发前 1–3 小时提醒；路线暴露与预计等待时长；数据来源、更新时间和建议理由。</p>
+      <p class="evidence"><strong>访谈依据：</strong>实验四中 U01 提到考试周必须准时；如果建议能说明路线风险、持续时间和提前出发时间，会更愿意调整。</p>
+    </article>
+    <article class="persona">
+      <div class="persona-title"><h3>周宁</h3><span class="persona-tag">画像 B · 来源 U04</span></div>
+      <p class="identity">22 岁 · 学生 · 步行 + 公交 · 有特殊健康需求</p>
+      <blockquote>“我需要的不是更多数字，而是今天是否适合长时间外出，以及哪里可以坐着等。”</blockquote>
+      <p>周宁需要进行复诊等必要出行。她会根据身体状态、公交便利程度和是否有座位来安排时间，不能只选择最短路线，也不希望被要求提供诊断名称。</p>
+      <div class="persona-cols"><div><h4>目标</h4><ul><li>安全完成就医等必要出行</li><li>减少站台久等和无座站立</li><li>用大字、声音和简单语言获得行动建议</li></ul></div><div><h4>困难</h4><ul><li>站台没有座椅或遮阳时很快疲劳</li><li>字体小、操作复杂的应用难以使用</li><li>打车更省力但费用高，不能每次承担</li></ul></div></div>
+      <h4>设计需要关注</h4><p>大字、高对比度和语音提示；座椅、遮阴、饮水与厕所信息；可选的陪同或共享计划，默认保护隐私。</p>
+      <p class="evidence"><strong>访谈依据：</strong>实验四中 U04 提到颜色和数字不容易理解；希望直接得到是否适合长时间外出的判断和附近可坐地点。</p>
+    </article>
+    <p class="foot">画像中的姓名为化名，画像是根据访谈模式整理的综合人物原型，不对应单一受访者的完整身份档案。</p>
+  </section>
+
+  <section class="story">
+    <h2>4. 故事板一：林然的考试日出行</h2>
+    <p class="story-intro">从“必须准时”到“有依据地选择少暴露路线” · 林然（U01 访谈证据）</p>
+    <div class="story-grid">
+      <article class="frame"><span class="frame-num">场景 01</span><h4>必须出发</h4><p><strong>现场：</strong>考试周早上，林然必须到教室，原定步行到地铁站。</p><p><strong>行动：</strong>她打开手机查看出发前的环境情况。</p><p class="outcome"><strong>变化：</strong>固定课程时间成为最先要满足的约束。</p></article>
+      <article class="frame"><span class="frame-num">场景 02</span><h4>看到风险</h4><p><strong>现场：</strong>应用显示站口和学校门口路口的暴露较高，并标出数据来源和更新时间。</p><p><strong>行动：</strong>林然查看风险持续时间，而不是只看一个颜色。</p><p class="outcome"><strong>变化：</strong>她理解了风险发生在哪里。</p></article>
+      <article class="frame"><span class="frame-num">场景 03</span><h4>比较方案</h4><p><strong>现场：</strong>应用给出原路线、提前出发和少户外等待路线。</p><p><strong>行动：</strong>她比较预计到达时间、额外费用和户外等待。</p><p class="outcome"><strong>变化：</strong>建议回应了“能不能改”的现实问题。</p></article>
+      <article class="frame"><span class="frame-num">场景 04</span><h4>做出选择</h4><p><strong>现场：</strong>林然选择提前 30 分钟出发，地铁替代共享单车，并选择有树荫的步行段。</p><p><strong>行动：</strong>她保存路线，并打开一次性出发提醒。</p><p class="outcome"><strong>变化：</strong>她没有被要求完全改变计划。</p></article>
+      <article class="frame"><span class="frame-num">场景 05</span><h4>途中变化</h4><p><strong>现场：</strong>站口等待时间变长，应用提醒附近可短暂停留的室内地点。</p><p><strong>行动：</strong>林然根据实际等待调整停留位置。</p><p class="outcome"><strong>变化：</strong>信息从抽象预警变成现场可执行动作。</p></article>
+      <article class="frame"><span class="frame-num">场景 06</span><h4>准时到达</h4><p><strong>现场：</strong>林然抵达学校，户外停留少于原路线。</p><p><strong>行动：</strong>她看到建议依据并反馈站口等待情况。</p><p class="outcome"><strong>变化：</strong>准时、舒适与可信度同时得到验证。</p></article>
+    </div>
+  </section>
+
+  <section class="story">
+    <h2>5. 故事板二：周宁的复诊日出行</h2>
+    <p class="story-intro">从“看不懂风险”到“得到可访问的必要出行支持” · 周宁（U04 访谈证据）</p>
+    <div class="story-grid">
+      <article class="frame"><span class="frame-num">场景 01</span><h4>不能取消的行程</h4><p><strong>现场：</strong>周宁当天需要去医院复诊，公交站和医院入口都不能随意更换。</p><p><strong>行动：</strong>她在应用中选择“需要休息”和“公交出行”。</p><p class="outcome"><strong>变化：</strong>服务从约束出发，而不是默认建议取消出行。</p></article>
+      <article class="frame"><span class="frame-num">场景 02</span><h4>听懂今天的风险</h4><p><strong>现场：</strong>应用用大字和语音说明：中午前后不适合长时间户外等待。</p><p><strong>行动：</strong>周宁选择语音播放并查看简单行动建议。</p><p class="outcome"><strong>变化：</strong>风险被翻译成容易理解的判断。</p></article>
+      <article class="frame"><span class="frame-num">场景 03</span><h4>查看可停留点</h4><p><strong>现场：</strong>路线旁标出有座椅、遮阳和饮水的位置。</p><p><strong>行动：</strong>她选择有座位的公交站，并查看预计等候时间。</p><p class="outcome"><strong>变化：</strong>“最短路线”不再是唯一标准。</p></article>
+      <article class="frame"><span class="frame-num">场景 04</span><h4>邀请支持</h4><p><strong>现场：</strong>周宁将简明出行计划分享给家人，但不分享精确历史位置。</p><p><strong>行动：</strong>家人确认可以陪同到公交站。</p><p class="outcome"><strong>变化：</strong>协作降低了临时改计划的压力。</p></article>
+      <article class="frame"><span class="frame-num">场景 05</span><h4>途中提醒</h4><p><strong>现场：</strong>公交晚点，应用以大字和声音提示附近室内休息点。</p><p><strong>行动：</strong>周宁在站外等待前先进入可休息地点。</p><p class="outcome"><strong>变化：</strong>提醒尊重身体感受，且不依赖复杂操作。</p></article>
+      <article class="frame"><span class="frame-num">场景 06</span><h4>完成复诊</h4><p><strong>现场：</strong>周宁到达医院并保留返程计划。</p><p><strong>行动：</strong>她关闭提醒并删除本次位置记录。</p><p class="outcome"><strong>变化：</strong>必要出行完成，用户仍掌握隐私和决定权。</p></article>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>6. 总结与后续设计重点</h2>
+    <div class="conclusion"><p>流程模型说明 AirAware 不是单向推送空气质量数字，而是连接学生、家人或同伴、交通与场所服务以及数据来源的协调层。HMW 保留了继续探索的空间；画像和故事板则把研究证据具体化为两种高频情境：必须准时到达的学生，以及需要可访问支持的必要出行者。</p><p>下一步原型应优先验证路线解释、休息点信息、权限控制和低打扰提醒是否真的能帮助用户行动。界面应说明建议依据与更新时间，允许不提供精确位置和诊断信息，并把最终选择权交还给用户。</p></div>
+    <p class="foot">研究结论基于课程项目的小规模研究材料，用于指导交互设计，不构成医学诊断或普遍性结论。</p>
+  </section>
+</body>
+</html>
